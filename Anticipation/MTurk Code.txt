@@ -1,0 +1,35 @@
+<p>Go to <a href="http://localhost/card.php?hitId=1" onclick="addId()" target="_blank">this website and work on the task there</a> (link opens new page). PLEASE LEFT CLICK THE LINK TO GET PAID.</p>
+
+<p>At the end, you will get a confirmation number. Copy that number and paste it into the field below, and then submit the HIT.</p>
+<script type="text/javascript">
+//from here on leave everything as it is
+function addId(){
+    //setting default values. If the parsing of the workerId fails,
+    //99999 will be transmitted.
+    var workerId="99999";
+    var iFrameURL=document.location.toString();
+    var temp="";
+    //parsing and extracting the workerId
+    if (iFrameURL.indexOf("workerId") > 0){
+        if (iFrameURL.indexOf("?") > 0){
+            temp=iFrameURL.split("?")[1];
+            if (temp.indexOf("&") > 0){
+                temp=temp.split("&")[2];
+                if (temp.indexOf("=") > 0){
+                    workerId=temp.split("=")[1];
+                }
+            }
+        }
+    }
+    //appending the workerId to the link
+    document.links[0].href+="&workerId=" + workerId + "&assignmentId=1";
+}
+</script>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>confirmation number:</p>
+
+<p><textarea cols="80" name="answer" rows="3"></textarea></p>

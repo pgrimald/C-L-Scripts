@@ -1,0 +1,269 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Satisfy);
+
+
+html, body {padding:0;margin:0;}
+
+
+
+
+/* GENERALIZED STYLES */
+/*--------------------*/
+
+
+
+body {
+    overflow:auto;
+	font-family: Arial, sans-serif;
+	color: #FFF;
+	background: #ccc;
+}
+a{
+    text-decoration: none;
+}
+
+
+/*  -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box; */
+
+.card {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    background: #eee;
+    border-style:solid;
+    border-width:7px;
+    border-color: rgba(255,255,255,1);
+    box-shadow: 6px 6px 5px rgba(0,0,0,0.1);
+    -webkit-border-radius: 12px;
+       -moz-border-radius: 12px;
+            border-radius: 12px;
+    
+}
+.title {
+    position: absolute;
+    color: #777;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2em;
+    top: 50px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    cursor: default;
+}
+
+.nextButton {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background: #ddd;
+    bottom: 5%;
+    left: 50%;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border-style:solid;
+    border-width:1px;
+    border-color: rgba(0,0,0,.1);
+    -webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+
+}
+.nextButton:hover{
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.nextButtonText{
+    width: 100%;
+    height: 100%;
+    padding:  12.5px 0px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #888;
+}
+.nextButtonText:hover {
+    color: #aaa;
+}
+.bodyTextHolder{
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+.bodyText {
+    width: 100%;
+    color: #666;
+    font-size: 1.6em;
+    font-weight: 300;
+    text-align: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bodyText h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+#results{
+    padding: 1em 1em;
+    font-size: 1.4em;
+    width: 60%;
+}
+
+.progressBar {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    width: 100%;
+    height: 5px;
+    background: #fff;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+            border-radius: 5px;
+	-webkit-box-shadow: inset 0 -1px 1px rgba(0,0,0,0.4);
+	-moz-box-shadow   : inset 0 -1px 1px rgba(0,0,0,0.4);
+	box-shadow        : inset 0 -1px 1px rgba(0,0,0,0.4);
+}
+.progressBar  span {
+	display: block;
+    width: 100%;
+	height: 100%;
+	   -webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	       -moz-border-radius-topright: 5px;
+	    -moz-border-radius-bottomright: 5px;
+	           border-top-right-radius: 5px;
+	        border-bottom-right-radius: 5px;
+	    -webkit-border-top-left-radius: 5px;
+	 -webkit-border-bottom-left-radius: 5px;
+	        -moz-border-radius-topleft: 5px;
+	     -moz-border-radius-bottomleft: 5px;
+	            border-top-left-radius: 5px;
+	         border-bottom-left-radius: 5px;
+	background-color: #cc0000;
+	position: relative;
+	overflow: hidden;
+/*     -webkit-transition: width 0.2;
+    -moz-transition: width 0.2s;
+    -ms-transition: width 0.2s;
+    transition: width 0.2s; */
+}
+
+.radioHolder {
+    position: absolute;
+    color: #222;
+    left: 50%;
+    top: 90%;
+    display: table; 
+    background: rgba(0,0,0, 0.1);
+    width: 100%;
+    height: 2em;
+    -webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	        transform: translateX(-50%);
+    -webkit-border-radius: 6px;
+       -moz-border-radius: 6px;
+            border-radius: 6px;
+}
+.radioHolder div {
+    border: 1px solid rgba(0,0,0,0.3);
+}
+.radioHolder div:hover {
+    background: rgba(255,255,255, 0.3);
+}
+.radioHolder label {
+    display: table-cell; 
+    height: 2em;
+    text-align: center;
+    vertical-align:middle
+    
+}
+.radioHolder input {
+    width: 2em;
+    height: 2em;
+
+}
+.recallContainer {
+    left: 50%;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.textRecall  {
+    padding: 1em 1em;
+}
+
+.recallContainer textarea, .recallContainer div{
+    width: 50%;
+    display: table-cell; 
+    height: 100%;
+    text-align: center;
+    vertical-align:middle
+}
+.recallContainer textarea{
+    min-height: 100px;
+}
+#progressContainer {
+    position: absolute;
+    top:10%;
+    left: 20px;
+    width: 50px;
+    height: 80%;
+}
+.circle {
+    background: white;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-width: 1px;
+    border-color: black;
+    transition: 1s;
+}
+.circleText {
+    width: 200%;
+    padding-top: 6px;
+    padding-left: 34px;
+}
+.connection {
+    height: 40px;
+    width: 5px;
+    background: #fff;
+    margin-left: 12px;
+}
+@media screen and (max-height: 1080px) {
+    .bodyText{
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-height: 950px) {
+    .bodyText{
+        font-size: 1em;
+    }
+}
+
+/*InputText Box Styling*/
+.cuedRecallResponseInput {
+	width: 180px;
+	height: 30px;
+	border: 3px solid #cccccc;
+	border-radius: 5px;
+	padding: 5px;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	text-align: center;
+}
